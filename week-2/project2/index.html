@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+      Pragmatic JavaScript
+      Chapter 1
+      Programming Assignment: Closures
+
+      Author: Ammar Ahmed
+      Date: October 28, 2026
+      Filename: index.html
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Create a fantasy RPG character using JavaScript closures." />
+    <title>Character Creation | The Ember Realms</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main id="mainContainer" class="page-shell">
+      <header class="site-header">
+        <div class="brand" aria-label="The Ember Realms">
+          <span class="brand-mark" aria-hidden="true">✦</span>
+          <span>THE EMBER REALMS</span>
+        </div>
+        <span class="chapter-label">CHAPTER I <span aria-hidden="true">/</span> THE BEGINNING</span>
+      </header>
+
+      <div class="intro">
+        <div class="eyebrow"><span class="tiny-diamond" aria-hidden="true">◆</span> THE CHRONICLES AWAIT</div>
+        <h1>Forge your <em>legend.</em></h1>
+        <p>Every great saga begins with a name. Shape your hero and take the first step into the unknown.</p>
+      </div>
+
+      <div class="character-layout">
+        <section class="panel creation-panel" aria-labelledby="creator-heading">
+          <div class="panel-heading">
+            <span class="panel-number">01</span>
+            <div>
+              <p class="panel-kicker">THE ORIGIN</p>
+              <h2 id="creator-heading">Create your character</h2>
+            </div>
+          </div>
+
+          <form id="characterForm">
+            <div class="field">
+              <label for="heroName">Character name <span class="required">*</span></label>
+              <input type="text" id="heroName" name="heroName" placeholder="e.g. Eryndor the Brave" maxlength="28" autocomplete="off" required />
+              <p class="field-hint">What will the bards call you?</p>
+            </div>
+
+            <div class="field">
+              <label for="heroGender">Gender <span class="required">*</span></label>
+              <select id="heroGender" name="heroGender" required>
+                <option value="">Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="heroClass">Character class <span class="required">*</span></label>
+              <select id="heroClass" name="heroClass" required>
+                <option value="">Choose your path</option>
+                <option value="warrior">Warrior</option>
+                <option value="mage">Mage</option>
+                <option value="rogue">Rogue</option>
+              </select>
+              <p class="field-hint">A hero's calling shapes their destiny.</p>
+            </div>
+
+            <button type="submit" id="generateHero" class="create-button">
+              <span>Create character</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+          </form>
+          <p class="privacy-note"><span aria-hidden="true">✧</span> Your hero's details are kept private inside a JavaScript closure.</p>
+        </section>
+
+        <section class="panel preview-panel" aria-labelledby="preview-heading">
+          <div class="panel-heading">
+            <span class="panel-number">02</span>
+            <div>
+              <p class="panel-kicker">THE REVEAL</p>
+              <h2 id="preview-heading">Your character</h2>
+            </div>
+          </div>
+
+          <div id="characterOutput" class="character-output" aria-live="polite" aria-atomic="true">
+            <div class="empty-preview">
+              <div class="avatar avatar-empty" aria-hidden="true"><span>?</span></div>
+              <p class="empty-title">An unwritten story</p>
+              <p class="empty-description">Enter your details and create a character to reveal your hero.</p>
+            </div>
+          </div>
+          <div class="preview-footer"><span aria-hidden="true">✦</span> A NEW CHAPTER BEGINS <span aria-hidden="true">✦</span></div>
+        </section>
+      </div>
+
+      <footer class="site-footer">
+        <span>THE EMBER REALMS <span aria-hidden="true">·</span> CHARACTER CREATOR</span>
+        <span>WEB 330 <span aria-hidden="true">/</span> CLOSURES EXERCISE</span>
+      </footer>
+    </main>
+  </body>
+</html>
